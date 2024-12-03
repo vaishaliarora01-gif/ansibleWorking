@@ -1,0 +1,12 @@
+---
+  - hosts: all
+    become: present
+    tasks:
+     -  name: installing apache2
+        apt:
+          name: apache2
+          state: present
+     -   name: installing tmux
+         apt:  
+            name: tmux
+            state: present
