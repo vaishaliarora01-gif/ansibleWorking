@@ -1,12 +1,13 @@
 ---
   - hosts: all
     become: present
+    gather_facts: yes
     tasks:
      -  name: installing apache2
         apt:
           name: apache2
           state: present
      -   name: installing tmux
-         apt:  
+         apt:
             name: tmux
             state: present
